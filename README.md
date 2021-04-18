@@ -6,13 +6,13 @@ Healtpredec provides many services which help to predict the various disease lik
 
 ### Various models used
 
-* Breast Cancer model 
-* Diabetes Model
-* Pneumonia model
-* Stroke model
-* Maleria model
-* Liver disease model
-* Heart disease model
+* Breast Cancer model [get from repo.](ML models/Breast_cancer_model)
+* Diabetes Model [get from repo.](ML models/Diabetes_model)
+* Pneumonia model [Get from Gdrive](https://drive.google.com/file/d/1vFdWdVc99Lk_y9rxu2E9YI5wR_437gbD/view?usp=sharing)
+* Stroke model [get from repo.](ML models/Stroke_model)
+* Maleria model [Get from Gdrive](https://drive.google.com/file/d/1cu2PpRddS6FWBIJ8-Tu-pMmWMp_aNNZ-/view?usp=sharing)
+* Liver disease model [get from repo.](ML models/Liver_model)
+* Heart disease model [get from repo.](ML models/Heart_desease_model)
 
 ### Notebooks of the models
 * [Breast Cancer model ](https://nbviewer.jupyter.org/github/atultyagi612/Healtpredec/blob/main/Model%20Notebooks/Breast%20cancer.ipynb)
@@ -44,4 +44,12 @@ Pillow
 #### Model prediction
 ![Project image](demo/model1.gif)
 
-![Project image](demo/model2.gif)
+![Project image](demo/model13.gif)
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+Whole Project is available on heroku https://healtpredec.herokuapp.com/
+
