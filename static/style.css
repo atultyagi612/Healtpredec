@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Quicksand";
+}
+body {
+    margin: 0;
+    /* background-color: #F5F8FD; */
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: "Quicksand";
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 35px;
+  }
+
+  .pred_image img{
+      width: 50%;
+    }
+
+  @media screen and (min-width: 736px) {
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 35px;
+    }
+
+    .comment-box {
+      grid-column: 1 / -1;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .pred_image{
+    flex-direction: column;
+    }
+    .pred_image img{
+      width: 80%;
+    }
+    
+  }
+  .contact-form {
+    margin-top: 30px;
+  }
+
+  .form-field {
+    position: relative;
+  }
+
+  .label {
+    position: absolute;
+    left: 0;
+    top: -25px;
+    line-height: 26px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: #888;
+    cursor: text;
+  }
+
+  input[type="number"],
+  select {
+    border: none;
+    height: 40px;
+    padding: 0 10px;
+    width: 100%;
+    background-color: rgb(247, 247, 247);
+    color: rgb(85, 85, 85);
+  }
+  .btn{
+    width: 140px;
+  margin-top: 36px;
+  }
+
+  .main_heading{
+text-align:center;    
+font-size: 2.5rem;
+margin-top: 30px;
+}
+.form_parent{
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+}

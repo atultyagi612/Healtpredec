@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Breast Cancer | Healtpredec</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <a class="navbar-brand" href="/" style="font-family: RocknRoll One;    margin-left: 32px;
+    ">Healtpredec</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav" style="justify-content: flex-end;">
+      <ul class="navbar-nav" style="margin-right: 84px;">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/#About_US_ID">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/#services">Services</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <p class="main_heading">Make a Quick prediction of heaving breast cancer or not</p>
+
+  <div style="display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;">
+
+
+    <form onsubmit="sub(event)" id="contact_form" class="contact-form contact-grid" style="    width: 80%;">
+
+    </form>
+    <button class="btn btn-dark" type="submit" form="contact_form" value="Submit" >Submit</button>
+    <p id="Predic_out" style="margin-top: 22px;
+    border-radius: 5px;
+    padding: 7px;"></p>
+  </div>
+
+  <div class="about" style="    width: 80%;
+  margin-left: 10%;    margin-top: 181px;">
+    <h2>What is breast cancer?</h2>
+    <div class="pred_image" style="    display: flex;
+    align-items: center;">
+
+      <img src="../static/images/breast_cancer1" alt="Breast Cancer">
+      <p> Breast cancer is a disease in which cells in the breast grow out of control. There are different kinds of
+        breast
+        cancer. The kind of breast cancer depends on which cells in the breast turn into cancer.
+
+        Breast cancer can begin in different parts of the breast. A breast is made up of three main parts: lobules,
+        ducts,
+        and connective tissue. The lobules are the glands that produce milk. The ducts are tubes that carry milk to the
+        nipple. The connective tissue (which consists of fibrous and fatty tissue) surrounds and holds everything
+        together. Most breast cancers begin in the ducts or lobules.
+
+        Breast cancer can spread outside the breast through blood vessels and lymph vessels. When breast cancer spreads
+        to
+        other parts of the body, it is said to have metastasized.</p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <h3>What Are the Symptoms of Breast Cancer?</h3>
+    <br>
+    <p>Different people have different symptoms of breast cancer. Some people do not have any signs or symptoms at all. <br>
+
+      Some warning signs of breast cancer are—
+
+    <ul>
+
+      <ul>
+
+        New lump in the breast or underarm (armpit).
+      </ul>
+      <ul>
+
+        Thickening or swelling of part of the breast.
+      </ul>
+      <ul>
+
+        Redness or flaky skin in the nipple area or the breast.
+      </ul>
+      <ul>
+
+        Pulling in of the nipple or pain in the nipple area.
+      </ul>
+      <ul>
+
+        Nipple discharge other than breast milk, including blood.
+      </ul>
+      <ul>
+
+        Any change in the size or the shape of the breast.
+      </ul>
+      <ul>
+
+        Pain in any area of the breast.
+      </ul>
+      <ul>
+        Irritation or dimpling of breast skin.
+      </ul>
+    </ul>
+    Keep in mind that these symptoms can happen with other conditions that are not cancer.</p>
+
+    <br><br><br>
+    <h3>What Are the Risk Factors for Breast Cancer?</h3>
+    <br>
+    <p>Studies have shown that your risk for breast cancer is due to a combination of factors. The main factors that
+      influence your risk include being a woman and getting older. Most breast cancers are found in women who are 50
+      years old or older.
+
+      Some women will get breast cancer even without any other risk factors that they know of. Having a risk factor does
+      not mean you will get the disease, and not all risk factors have the same effect. Most women have some risk
+      factors, but most women do not get breast cancer. If you have breast cancer risk factors, talk with your doctor
+      about ways you can lower your risk and about screening for breast cancer.</p>
+
+    <br><br><br>
+    <h3>How Is Breast Cancer Treated?</h3>
+    <br>
+    <p>Breast cancer is treated in several ways. It depends on the kind of breast cancer and how far it has spread.
+      People with breast cancer often get more than one kind of treatment.
+    <ul>
+      <li>Surgery. An operation where doctors cut out cancer tissue.</li>
+      <li>Chemotherapy. Using special medicines to shrink or kill the cancer cells. The drugs can be pills you take or
+        medicines given in your veins, or sometimes both.
+      </li>
+      <li>Hormonal therapy. Blocks cancer cells from getting the hormones they need to grow.</li>
+      <li>Biological therapy. Works with your body’s immune system to help it fight cancer cells or to control side
+        effects from other cancer treatments.
+      </li>
+      <li>Radiation therapy. Using high-energy rays (similar to X-rays) to kill the cancer cells.</li>
+    </ul>
+    Doctors from different specialties often work together to treat breast cancer. Surgeons are doctors who perform
+    operations. Medical oncologists are doctors who treat cancer with medicine. Radiation oncologists are doctors who
+    treat cancer with radiation.</p>
+    <br><br><br>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <div class="footer" style="    display: flex;
+background-color: rgb(27, 26, 26);
+color: white;
+margin: 0px;
+flex-direction: column;
+height: 250px;
+justify-content: center;">
+    <p style="    font-size: 3rem;
+text-align: center;
+font-family: 'RocknRoll One';">Healtpredec</p>
+    <p style="text-align: center;
+font-family: monospace;">Made with ❤ by Atul Tyagi</p>
+    <p style="text-align: center;
+font-family: monospace;">© Copyright 2021 ATUL TYAGI</p>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    let lenght_item = 0
+    function create_elem() {
+      items = ['radius_mean', 'texture_mean', 'perimeter_mean', 'area_mean',
+        'smoothness_mean', 'compactness_mean', 'concavity_mean',
+        'concave points_mean', 'symmetry_mean', 'fractal_dimension_mean',
+        'radius_se', 'texture_se', 'perimeter_se', 'area_se', 'smoothness_se',
+        'compactness_se', 'concavity_se', 'concave points_se', 'symmetry_se',
+        'fractal_dimension_se', 'radius_worst', 'texture_worst',
+        'perimeter_worst', 'area_worst', 'smoothness_worst',
+        'compactness_worst', 'concavity_worst', 'concave points_worst',
+        'symmetry_worst', 'fractal_dimension_worst']
+      min_type = [6.90000, 9.70000, 43.60000, 143.500000, 0.052630, 0.019380, 0.000000, 0.000000, 0.106000, 0.049960, 0.111500, 0.360200, 0.757000, 6.802000, 0.001713, 0.002252, 0.000000, 0.000000, 0.007882, 0.000895, 7.930000, 12.020000, 50.410000, 185.200000, 0.071170, 0.027290, 0.000000, 0.000000, 0.156500, 0.055040]
+      man_type = [28.11, 39.28, 188.5, 2501.0, 0.1634, 0.3454, 0.4268, 0.2012, 0.304, 0.09744, 2.873, 4.885, 21.98, 542.2, 0.03113, 0.1354, 0.396, 0.05279, 0.07895, 0.02984, 36.04, 49.54, 251.2, 4254.0, 0.2226, 1.058, 1.252, 0.29100000000000004, 0.6638, 0.2075]
+      values = [17.99, 10.38, 122.8, 1001.0, 0.1184, 0.2776, 0.3001, 0.1471,
+        0.2419, 0.07871, 1.095, 0.9053, 8.589, 153.4, 0.006399, 0.04904,
+        0.05372999999999999, 0.01587, 0.03003, 0.006193, 25.38, 17.33,
+        184.6, 2019.0, 0.1622, 0.6656, 0.7119, 0.2654, 0.4601, 0.1189]
+      lenght_item = items.length
+      elemens_temp = ''
+      for (let i = 0; i < items.length; i++) {
+        elem = `<div class="form-field name">
+      <label class="label" for="fname">${items[i]}*</label>
+      <input type="number" name="${items[i]}" min="${min_type[i]}" max="${man_type[i]}" step='0.000001' value="${values[i]}" required>
+    </div>`
+        elemens_temp += elem
+      }
+      document.getElementById('contact_form').innerHTML = elemens_temp
+    }
+    create_elem()
+
+    function loadDoc(data) {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        console.log(this.responseText)
+        if (this.readyState == 4 && this.status == 200) {
+          out = JSON.parse(this.responseText)
+          result_dec(out.result)
+        }
+        else {
+          result_dec('error occur')
+        }
+      };
+      xhttp.open("POST", "Brest_cancer", true);
+      xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      xhttp.send(`id=${data}`);
+    }
+    var myForm = ""
+    let ouput_data = []
+    function sub(e) {
+      ouput_data = []
+      e.preventDefault();
+      console.log("Done")
+      myForm = document.getElementById('contact_form');
+      for (let i = 0; i < lenght_item; i++) {
+        ouput_data.push(myForm.elements[i].value)
+      }
+      senddata(ouput_data)
+    }
+    function senddata(dat) {
+      let temp = "[" + dat.toString() + "]"
+      loadDoc(temp)
+    }
+
+    function result_dec(out) {
+      if (out == 0) {
+        document.getElementById('Predic_out').innerText = 'The predictions say that You have not Breast Cancer'
+        document.getElementById('Predic_out').style.backgroundColor = '#d2ebd3'
+      }
+      else if (out == 1) {
+        document.getElementById('Predic_out').innerText = 'The predictions say that You have Breast Cancer'
+        document.getElementById('Predic_out').style.backgroundColor = 'rgb(241 181 196)'
+      }
+      else {
+        document.getElementById('Predic_out').innerText = 'Waiting...'
+        document.getElementById('Predic_out').style.backgroundColor = 'rgb(239 233 234)'
+      }
+    }
+  </script>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Disease | Healtpredec</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <a class="navbar-brand" href="/" style="font-family: RocknRoll One;    margin-left: 32px;
+    ">Healtpredec</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav" style="justify-content: flex-end;">
+      <ul class="navbar-nav" style="margin-right: 84px;">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/#About_US_ID">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/#services">Services</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <p class="main_heading">Make a Quick prediction of heaving Heart Disease or not</p>
+
+  <div class="form_parent">
+
+
+    <form onsubmit="sub(event)" id="contact_form" class="contact-form contact-grid" style="    width: 80%;">
+
+    </form>
+    <button class="btn btn-dark" type="submit" form="contact_form" value="Submit" >Submit</button>
+    <p id="Predic_out" style="margin-top: 22px;
+    border-radius: 5px;
+    padding: 7px;"></p>
+  </div>
+
+
+
+  <div class="about" style="    width: 80%;
+  margin-left: 10%;    margin-top: 181px;">
+    <h2>What is Heart disease?</h2>
+    <div class="pred_image" style="    display: flex;
+    align-items: center;">
+
+      <img src="../static/images/heart_desease1.jpg" alt="Breast Cancer">
+      <p style="    padding: 16px;" >  Heart disease describes a range of conditions that affect your heart. <br> Heart diseases include: <br> <br>
+
+        &bull; Blood vessel disease, such as coronary artery disease <br>
+        &bull; Heart rhythm problems (arrhythmias) <br>
+        &bull; Heart defects you're born with (congenital heart defects) <br>
+        &bull; Heart valve disease <br>
+        &bull; Disease of the heart muscle <br>
+        &bull; Heart infection <br> <br>
+        Many forms of heart disease can be prevented or treated with healthy lifestyle choices.</p>
+    </div>
+    <br>
+    <br>
+    <br>
+    
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <div class="footer" style="    display: flex;
+  background-color: rgb(27, 26, 26);
+  color: white;
+  margin: 0px;
+  flex-direction: column;
+  height: 250px;
+  justify-content: center;">
+      <p style="    font-size: 3rem;
+  text-align: center;
+  font-family: 'RocknRoll One';">Healtpredec</p>
+      <p style="text-align: center;
+  font-family: monospace;">Made with ❤ by Atul Tyagi</p>
+      <p style="text-align: center;
+  font-family: monospace;">© Copyright 2021 ATUL TYAGI</p>
+  
+    </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    let lenght_item=0
+    function create_elem() {
+      items= ['age', 'sex(1 for male 0 for female)', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach',
+       'exang', 'oldpeak', 'slope', 'ca', 'thal']
+      min_type = [29.0, 0.0, 0.0, 94.0, 126.0, 0.0, 0.0, 71.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+      max_type = [77.0, 1.0, 3.0, 200.0, 564.0, 1.0, 2.0, 202.0, 1.0, 6.2, 2.0, 4.0, 3.0]
+    values=[ 63. ,   1. ,   3. , 145. , 233. ,   1. ,   0. , 150. ,   0. ,
+         2.3,   0. ,   0. ,   1.]
+    step=[1,1,1,1,1,1,1,1,1,0.1,1,1,1]
+    lenght_item=items.length
+       elemens_temp=''
+    for(let i=0;i<items.length;i++){
+      elem=`<div class="form-field name">
+      <label class="label" for="fname">${items[i]}*</label>
+      <input type="number" name="${items[i]}" min="${min_type[i]}" max="${max_type[i]}" step='${step[i]}' value="${values[i]}" required>
+    </div>`
+    elemens_temp+=elem
+    }
+    document.getElementById('contact_form').innerHTML=elemens_temp
+  }
+  create_elem()
+
+  function loadDoc(data) {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        console.log(this.responseText)
+        if (this.readyState == 4 && this.status == 200) {
+          out = JSON.parse(this.responseText)
+          result_dec(out.result)
+        }
+        else {
+          result_dec('error occur')
+        }
+      };
+      xhttp.open("POST", "heart_disease", true);
+      xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      xhttp.send(`id=${data}`);
+    }
+    var myForm = ""
+    let ouput_data = []
+    function sub(e) {
+      ouput_data = []
+      e.preventDefault();
+      console.log("Done")
+      myForm = document.getElementById('contact_form');
+      for (let i = 0; i < lenght_item; i++) {
+        ouput_data.push(myForm.elements[i].value)
+      }
+      senddata(ouput_data)
+    }
+    function senddata(dat) {
+      let temp = "[" + dat.toString() + "]"
+      loadDoc(temp)
+    }
+
+    function result_dec(out) {
+      if (out == 0) {
+        document.getElementById('Predic_out').innerText = 'The predictions say that You have not Heart Disease'
+        document.getElementById('Predic_out').style.backgroundColor = '#d2ebd3'
+      }
+      else if (out == 1) {
+        document.getElementById('Predic_out').innerText = 'The predictions say that You have Heart Disease'
+        document.getElementById('Predic_out').style.backgroundColor = 'rgb(241 181 196)'
+      }
+      else {
+        document.getElementById('Predic_out').innerText = 'Waiting...'
+        document.getElementById('Predic_out').style.backgroundColor = 'rgb(239 233 234)'
+      }
+    }
+  </script>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

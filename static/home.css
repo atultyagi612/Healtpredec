@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  .front_page {
+    background-image: url("../static/images/image2.jpg");
+    background-color: #cccccc;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    filter: blur(5px) brightness(0.6) contrast(1.4);
+  }
+  .front_page::before{
+      backdrop-filter: blur(10px);
+  }
+  
+  .front_text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(4 13 54);
+    width: 100%;
+  }
+  
+  .main_heading{
+    font-size: 3.5rem; font-family: 'RocknRoll One', sans-serif;width: 100%;
+  }
+  .main_second_para{
+    text-align: initial;
+      font-family: monospace;
+      font-size: 1.5rem;     text-align: center;
+  }
+       /* cards     */
+       /* Lazy Load Styles */
+  .card-image {
+      display: block;
+      min-height: 20rem; /* layout hack */
+      background: rgba(255, 255, 255, 0) center center no-repeat;
+      background-size: cover;
+      
+  }
+
+  
+  .card-image > img {
+      display: block;
+      width: 100%;
+      opacity: 0; /* visually hide the img element */
+  }
+  
+  .card-image.is-loaded {
+      filter: none; /* remove the blur on fullres image */
+      transition: filter 1s;
+  }
+  
+  .card-list {
+      display: block;
+      margin: 1rem auto;
+      padding: 0;
+      font-size: 0;
+      text-align: center;
+      list-style: none;
+  }
+  
+  .card {
+      display: inline-block;
+      width: 90%;
+      max-width: 20rem;
+      margin: 1rem;
+      font-size: 1rem;
+      text-decoration: none;
+      overflow: hidden;
+      box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
+      transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+  }
+  .card a{
+    text-decoration: none;
+    color: #0c0641;
+}
+  }
+  
+  .card:hover {
+      transform: translateY(-0.5rem) scale(1.0125);
+      box-shadow: 0 0.5em 3rem -1rem rgba(0,0,0,0.5);
+  }
+  
+  .card-description {
+      display: block;
+      padding: 1em 0.5em;
+      color: #515151;
+      text-decoration: none;
+  }
+  
+  .card-description > h2 {
+      margin: 0 0 0.5em;
+  }
+  
+  .card-description > p {
+      margin: 0;
+  }
+
+
+  /* about us  */
+
+  .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .headings{
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: 'RocknRoll One';
+    margin-top: 104px;
+  }
+  .about_us{
+    width: 80%;
+    display: flex;
+    align-items: center;
+  }
+
+
+  .about_para{
+    padding: 124px;
+  }
+  .about_us img{
+    width: 40%;
+  }
+
+  @media screen and (max-width: 768px) {
+      .about_us{
+          flex-direction: column;
+          width: 100%;
+      }
+      .about_para{
+        padding: 20px;
+      }
+      .about_us img{
+        margin-bottom: 66px;
+        margin-top: 17px;
+        width: 95%;
+      }
+      .main_heading{
+        font-size: 2.5rem;
+      }
+      .main_second_para{
+        padding: 16px;
+      }
+  }
