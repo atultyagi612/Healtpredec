@@ -80,11 +80,8 @@ body {
       box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
       transition: transform 0.1s ease-in-out, box-shadow 0.1s;
   }
-  .card a{
-    text-decoration: none;
-    color: #0c0641;
-}
-  }
+
+  
   
   .card:hover {
       transform: translateY(-0.5rem) scale(1.0125);
@@ -95,7 +92,8 @@ body {
       display: block;
       padding: 1em 0.5em;
       color: #515151;
-      text-decoration: none;
+      text-decoration: none!important;
+      color: #0c0641;
   }
   
   .card-description > h2 {
